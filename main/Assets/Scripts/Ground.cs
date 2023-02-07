@@ -13,12 +13,13 @@ public class Ground : MonoBehaviour
         WallLooping();
         
     }
-    private void OnTriggerExit(Collider other)
+    public void OnTriggerExit(Collider other)
     {
         endlessGround.GroundMaker();
 
         Destroy(gameObject, 2);
             }
+   
     public GameObject ObstaclePrefab;
     
     void WallLooping()

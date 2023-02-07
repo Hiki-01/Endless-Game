@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class EndlessGround : MonoBehaviour
 {
-    public  int V =10000;
+    public int MakeGround = 10;
     public GameObject Ground;
-    Vector3 nextGround;
+    Vector3 NextGround;
    public void GroundMaker() {
-       GameObject temp= Instantiate(Ground, nextGround, Quaternion.identity);
-        nextGround = temp.transform.GetChild(1).transform.position;
+       GameObject temp= Instantiate(Ground, NextGround, Quaternion.identity);
+        NextGround = temp.transform.GetChild(1).transform.position;
     }
     void Start()
     {
-        for (int i = 0; i < V; i++)
+        for (int i = 0; i < MakeGround; i++)
         {
             GroundMaker();
         }
